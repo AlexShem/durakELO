@@ -1,58 +1,88 @@
-# Contributing to durakELO
+# Working with durakELO
 
-We thank you for considering contributing to `durakELO`. Your involvement makes `durakELO` a powerful tool. Below is a guide on how to participate effectively in package development in this repository.
+First off, thank you for considering contributing to `durakELO`! It's people like you that make `durakELO` such a great tool.
 
-## Guidelines for Collaborators
+## For collaborators
 
-### Gitflow Workflow
+### Gitflow workflow
 
-We employ the [gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for software development. Here is a brief overview:
+![development branching workflow](https://wac-cdn.atlassian.com/dam/jcr:cc0b526e-adb7-4d45-874e-9bcea9898b4a/04%20Hotfix%20branches.svg?cdnVersion=1282)
 
-1. **Branch Setup**: The two main branches are `main` (for stable releases and production-ready code) and `develop` (for developing new features).  
+Follow the tutorial about [gitflow workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for software development.
 
-2. **Feature Branches**: These branches originate from `develop` and accommodate individual features. After completing a feature, merge the feature branch back into `develop`.
+1. **Branch Setup**:
+  - Create two main branches: `main` and `develop`.
+  - Develop all new features and changes in feature branches based on `develop`.
+  - Use `main` for stable releases and production-ready code.
 
-3. **Release Branches**: Create these branches from `develop` when preparing for a release. They should contain bug fixes and release-related tasks. Upon stabilizing the release, merge the branch into both `main` and `develop` and tag the release commit in `main`.
+2. **Feature Branches**:
+  - Create a feature branch off `develop` for each new feature.
+  - Work on the feature branch, regularly committing and pushing changes.
+  - Once the feature is complete, merge the feature branch back into `develop`.
 
-4. **Hotfix Branches**: These branches, created from `main`, are for urgent fixes on production releases. Merge them into both `main` and `develop` once the fix is completed.
+3. **Release Branches**:
+  - When preparing for a release, create a release branch from `develop`.
+  - Only include bug fixes and release-oriented tasks in the release branch.
+  - Test and stabilize the release branch.
+  - Merge the release branch into both `main` and `develop`.
+  - Tag the release commit in `main` with a version number.
 
-5. **Collaboration**: Regular synchronization, code reviews, pull requests for merging, and requiring approval from team members before merging into main are some good practices.
+4. **Hotfix Branches**:
+  - Create hotfix branches from `main` to address urgent issues in production releases.
+  - Apply fixes directly to the hotfix branch.
+  - Merge the hotfix branch into both `main` and `develop`.
+  - Tag the updated release commit in `main` with an updated version number.
 
-## Guidelines for Contributers
+5. **Collaboration**:
+  - Clearly communicate and document the Gitflow workflow for all contributors.
+  - Encourage regular branch synchronization, updates, and pulling from `develop`.
+  - Perform code reviews and use pull requests for merging feature and release branches.
+  - Require approval from team members before merging into `main`.
 
-Ensure to conform to our [Code of Conduct](aleksandr.shemendyuk@unil.ch). If you find unacceptable conduct, please report it.
+## Contributing to durakELO
 
-### Ways to Contribute
+### Code of Conduct
 
-#### Bug Reports
+By participating, you are expected to uphold this code. Please report unacceptable behavior to [aleksandr.shemendyuk@unil.ch].
 
-Please check if there's an existing [bug report](https://github.com/AlexShem/durakELO/issues) before creating a new one. Include a clear title and description, as much relevant details as possible, and code samples (or test cases) in your report.
+### How Can I Contribute?
+
+#### Reporting Bugs
+
+Ensure the bug was not already reported by searching on GitHub under [Issues](https://github.com/AlexShem/durakELO/issues).
+
+If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/AlexShem/durakELO/issues/new). Be sure to include a title and clear description, as much relevant information as possible, and a code sample or an executable test case demonstrating the expected behavior that is not occurring.
 
 #### Suggesting Enhancements
 
-You can suggest improvements by creating new issues with a clear title and description in the [Issues](https://github.com/AlexShem/durakELO/issues) section.
+Open a new issue with a clear title and description in the [Issues](https://github.com/AlexShem/durakELO/issues) section.
 
-#### First Code Contribution
+#### Your First Code Contribution
 
-For your first code contribution, fork the repo, create a branch in your forked repo, make your changes, and submit a pull request to our `develop` branch.
+- Fork the repo.
+- Create a new branch in your forked repo.
+- Make your changes.
+- Submit a pull request to the `develop` branch.
 
 #### Pull Requests
 
-Remove any installation or build dependencies after a build. Also, update the README.md with changes and increase version numbers in example files and README.md accordingly.
+- Ensure any install or build dependencies are removed before the end of the layer when doing a build.
+- Update the README.md with details of changes.
+- Increase the version numbers in any examples files and the README.md to the new version that this Pull Request would represent.
 
-## Guidelines on Style
+## Styleguides
 
 ### Git Commit Messages
 
 - Use the present tense ("Add feature" not "Added feature").
-- Use the imperative mood ("Move cursor to.." not "Moves cursor to..").
+- Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
 - Limit the first line to 72 characters or less.
-- Reference pull requests and issues after the first line.
+- Reference issues and pull requests liberally after the first line.
 
-### R Style Guide
+### R Styleguide
 
-Adhere to accepted R style guides, such as [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) or the [tidyverse style guide](https://style.tidyverse.org/).
+Stick to commonly accepted R styleguides like the [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) or the [tidyverse style guide](https://style.tidyverse.org/).
 
-## Concluding Notes
+## Additional Notes
 
-Your time and effort contribute significantly to `durakELO` and benefits the entire community. We appreciate your inputs!
+Thank you for investing the time and effort to help improve `durakELO`. Your contribution benefits the entire community and is deeply appreciated!
